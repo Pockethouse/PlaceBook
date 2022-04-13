@@ -1,0 +1,7 @@
+<resources>
+    <string name="default_photo">Default photo</string>
+    <string name="bookmark_image">Bookmark image</string>
+    <string name="app_name">PlaceBook</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCQ5Af_h1QlW48DQeUWVy5I54OOr1MrMYM</string>
+</resources>
