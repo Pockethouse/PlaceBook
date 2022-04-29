@@ -5,8 +5,14 @@
       <map>
         <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2075" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/layout/activity_bookmark_details.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/layout/activity_maps.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/layout/bookmark_item.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/layout/content_bookmark_info.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/layout/drawer_view_maps.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/layout/main_view_maps.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/menu/menu_bookmark_details.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/PlaceBook/app/src/main/res/xml/file_paths.xml" value="0.19635416666666666" />
       </map>
     </option>
   </component>

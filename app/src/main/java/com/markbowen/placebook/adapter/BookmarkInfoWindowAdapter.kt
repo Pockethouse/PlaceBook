@@ -1,24 +1,23 @@
 package com.markbowen.placebook.adapter
 import android.app.Activity
-import android.graphics.Bitmap
 import android.view.View
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 import com.markbowen.placebook.databinding.ContentBookmarkInfoBinding
 import com.markbowen.placebook.ui.MapsActivity
+import com.markbowen.placebook.viewModel.MapsViewModel
 
-// 2
-class BookmarkInfoWindowAdapter(context: Activity) :
+
+class BookmarkInfoWindowAdapter(val context: Activity) :
     GoogleMap.InfoWindowAdapter {
-    // 3
+
     private val binding = ContentBookmarkInfoBinding.inflate(context.layoutInflater)
-    // 4
+
     override fun getInfoWindow(marker: Marker): View? {
-        // This function is required, but can return null if
-        // not replacing the entire info window
+
         return null
     }
-    // 5
+
     override fun getInfoContents(marker: Marker): View? {
         binding.title.text = marker.title ?: ""
         binding.phone.text = marker.snippet ?: ""
@@ -26,10 +25,25 @@ class BookmarkInfoWindowAdapter(context: Activity) :
 
         val imageView = binding.photo
 
-        //You’re casting the marker.tag to a PlaceInfo object and then accessing the image
-        //property to set it as the imageView bitmap.
-        imageView.setImageBitmap((marker.tag as
-                MapsActivity.PlaceInfo).image)
+        //The when statement is used to run conditional code based on the class type of..
+        //..marker.tag
+
+        when (marker.tag) {
+            // If marker.tag is a MapsActivity.PlaceInfo, you set the imageView bitmap
+            //directly from the PlaceInfo.image object.
+            is MapsActivity.PlaceInfo -> {
+                imageView.setImageBitmap(
+                    (marker.tag as MapsActivity.PlaceInfo).image)
+            }
+            // If marker.tag is a MapsViewModel.BookmarkMarkerView, you set the imageView
+            //bitmap from the BookmarkMarkerView.
+            is MapsViewModel.BookmarkView -> {
+                val bookMarkview = marker.tag as
+                        MapsViewModel.BookmarkView
+                // Set imageView bitmap here
+                imageView.setImageBitmap(bookMarkview.getImage(context))
+            }
+        }
         return binding.root
     }
 }

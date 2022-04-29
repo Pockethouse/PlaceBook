@@ -14,7 +14,7 @@ import com.markbowen.placebook.model.Bookmark
         // loadAll() uses the @Query annotation to define an SQL statement to read all of
         //the bookmarks from the database and return them as a List of Bookmarks.
 
-        @Query("SELECT * FROM Bookmark")
+        @Query("SELECT * FROM Bookmark ORDER BY name")
         fun loadAll(): LiveData<List<Bookmark>>
 
         // the @Query annotation is..

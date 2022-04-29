@@ -4,4 +4,13 @@
     <string name="app_name">PlaceBook</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCQ5Af_h1QlW48DQeUWVy5I54OOr1MrMYM</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="phone_number">Phone number</string>
+    <string name="notes">Notes</string>
+    <string name="enter_notes">Enter notes</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="category">Category</string>
 </resources>

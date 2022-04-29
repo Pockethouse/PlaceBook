@@ -9,7 +9,7 @@ import com.markbowen.placebook.model.Bookmark
 //@Database annotation and defines an..
 //..array of all entities used by the database.
 
-@Database(entities = arrayOf(Bookmark::class), version = 1)
+@Database(entities = arrayOf(Bookmark::class), version = 3)
 abstract class PlaceBookDatabase : RoomDatabase() {
     // The abstract method bookmarkDao is defined to return a DAO interface
     abstract fun bookmarkDao(): BookmarkDao
@@ -21,10 +21,10 @@ abstract class PlaceBookDatabase : RoomDatabase() {
         fun getInstance(context: Context): PlaceBookDatabase {
             if (instance == null) {
                 // 6
-                instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    PlaceBookDatabase::class.java,
-                    "PlaceBook").build()
+                 instance = Room.databaseBuilder(context.applicationContext,
+                    PlaceBookDatabase::class.java, "PlaceBook")
+                    .fallbackToDestructiveMigration()
+                    .build()
             }
             // 7
             return instance as PlaceBookDatabase
